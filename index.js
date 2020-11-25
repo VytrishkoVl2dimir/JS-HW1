@@ -42,9 +42,14 @@ let faktorial = 1;
     const weeksAmount = 8;
     let consumptionОfЕverything = consumptionPerWeek*weeksAmount;
     let remainder = consumptionОfЕverything%sheetsInReamPaper;
-    let TotalPacks = (consumptionОfЕverything-remainder)/sheetsInReamPaper;
-    
-    console.log(TotalPacks);
+    if (remainder === 0) {
+        let TotalPacks = consumptionОfЕverything/sheetsInReamPaper;
+        console.log(TotalPacks);
+    } else {
+        let TotalPacks = (consumptionОfЕverything-remainder)/sheetsInReamPaper+1;
+        console.log(TotalPacks);
+    }
+
     console.log('');
     //-------------------------------------------------------
     
